@@ -19,13 +19,10 @@ final class MyTaskViewModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        // Initialize the CoreDataManager with in-memory store
         coreDataManager = CoreDataManager(inMemory: true)
         
-        // Initialize the TaskManager with the in-memory context
         TaskManager.shared.context = coreDataManager.context
         
-        // Initialize the view model
         viewModel = MyTaskViewModel()
     }
     
